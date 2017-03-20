@@ -6,7 +6,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="org.filip.hiden.sortement.kistan.sortement.SortementLayoutActivity$PlaceholderFragment">
+    tools:context="org.filip.hiden.sortement.kistan.sortement.view.SortementLayoutActivity">
     <ListView
     android:id="@+id/sortment_view"
     android:layout_width="match_parent"

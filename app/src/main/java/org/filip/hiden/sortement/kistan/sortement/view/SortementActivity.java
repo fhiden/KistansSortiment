@@ -1,9 +1,12 @@
-package org.filip.hiden.sortement.kistan.sortement;
+package org.filip.hiden.sortement.kistan.sortement.view;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import org.filip.hiden.sortement.kistan.sortement.R;
+import org.filip.hiden.sortement.kistan.sortement.model.adapters.SortementAdapter;
+import org.filip.hiden.sortement.kistan.sortement.model.SortementItem;
 
 import java.util.ArrayList;
 

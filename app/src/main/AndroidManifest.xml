@@ -8,12 +8,12 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SortementActivity">
+        <activity android:name=".view.SortementActivity">
 
         </activity>
         <activity
-            android:name=".SortementLayoutActivity"
-            android:label="@string/title_activity_sortement_layout"
+            android:name=".view.SortementLayoutActivity"
+            android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

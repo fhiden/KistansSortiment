@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Kistan 2.0</string>
+    <string name="title_activity_sortement_layout">SortementLayoutActivity</string>
+    <string name="action_settings">Settings</string>
+</resources>

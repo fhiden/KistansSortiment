@@ -1,8 +1,10 @@
-package org.filip.hiden.sortement.kistan.sortement;
+package org.filip.hiden.sortement.kistan.sortement.model.adapters;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+
+import org.filip.hiden.sortement.kistan.sortement.model.FragmentManagers.SortementFragment;
 
 import java.util.ArrayList;
 
@@ -19,7 +21,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        return new SortementFragment();
+        return new SortementFragment((String) getPageTitle(position));
     }
 
     @Override
@@ -29,16 +31,6 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public CharSequence getPageTitle(int position) {
-        switch (position) {
-            case 0:
-                return "SECTION 1";
-            case 1:
-                return "SECTION 2";
-            case 2:
-                return "SECTION 3";
-            case 3:
-                return "SECTION 4";
-        }
-        return null;
+       return categories.get(position);
     }
 }

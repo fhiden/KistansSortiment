@@ -1,4 +1,4 @@
-package org.filip.hiden.sortement.kistan.sortement;
+package org.filip.hiden.sortement.kistan.sortement.model;
 
 /**
  * Created by fhiden on 2017-03-14.

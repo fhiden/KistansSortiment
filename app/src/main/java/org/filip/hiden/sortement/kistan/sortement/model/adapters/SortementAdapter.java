@@ -1,16 +1,15 @@
-package org.filip.hiden.sortement.kistan.sortement;
+package org.filip.hiden.sortement.kistan.sortement.model.adapters;
 
-import android.content.ClipData;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
+
+import org.filip.hiden.sortement.kistan.sortement.R;
+import org.filip.hiden.sortement.kistan.sortement.model.SortementItem;
 
 import java.util.ArrayList;
 
