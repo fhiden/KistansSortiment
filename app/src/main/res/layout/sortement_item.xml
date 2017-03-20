@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/sortement_item">
+
+
+    <ImageView
+        android:layout_height="match_parent"
+        app:srcCompat="@mipmap/ic_launcher"
+        android:id="@+id/imageView"
+        android:layout_marginLeft="6dp"
+        android:layout_marginBottom="6dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_width="wrap_content"
+        android:cropToPadding="false" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_container"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/item_name"
+            android:textSize="18sp"
+            android:textAlignment="textStart"
+            android:textStyle="normal|bold"
+            android:layout_marginTop="3dp" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/item_type"
+            android:textSize="14sp"
+            android:textAlignment="textStart"
+            android:textStyle="normal|italic"
+            android:layout_marginTop="3dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:text="TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/item_price"
+                android:textSize="14sp"
+                android:textAlignment="textEnd"
+                android:textAllCaps="false"
+                android:textStyle="normal|italic"
+                android:layout_marginTop="3dp" />
+
+            <TextView
+                android:text="TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/item_unit"
+                android:textSize="14sp"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textStyle="normal|italic"
+                android:layout_weight="13.96"
+                android:layout_marginTop="3dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
