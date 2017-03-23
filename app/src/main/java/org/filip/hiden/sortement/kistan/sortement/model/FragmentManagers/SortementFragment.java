@@ -37,18 +37,18 @@ public class SortementFragment extends Fragment {
 
         sortement = (ListView) rootView.findViewById(R.id.sortment_view);
         items = new ArrayList<>();
-        items.add(new SortementItem("item1", categoryType, 30.0, "kr st"));
-        items.add(new SortementItem("item2", categoryType, 20.0, "kr st"));
-        items.add(new SortementItem("item3", categoryType, 60.0, "kr st"));
-        items.add(new SortementItem("item4", categoryType, 10.0, "kr st"));
-        items.add(new SortementItem("item5", categoryType, 30.0, "kr st"));
-        items.add(new SortementItem("item6", categoryType, 20.0, "kr st"));
-        items.add(new SortementItem("item7", categoryType, 60.0, "kr st"));
-        items.add(new SortementItem("item8", categoryType, 10.0, "kr st"));
-        items.add(new SortementItem("item9", categoryType, 30.0, "kr st"));
-        items.add(new SortementItem("item10",categoryType, 20.0, "kr st"));
-        items.add(new SortementItem("item11",categoryType, 60.0, "kr st"));
-        items.add(new SortementItem("item12",categoryType, 10.0, "kr st"));
+        items.add(new SortementItem("Oppegård Amarillo", categoryType, 30.0, "kr"));
+        items.add(new SortementItem("Litovell tapp", categoryType, 20.0, "kr"));
+        items.add(new SortementItem("Oppegård Golden ale", categoryType, 60.0, "kr"));
+        items.add(new SortementItem("Double hopp monster ipa", categoryType, 10.0, "kr"));
+        items.add(new SortementItem("Innis & Gunn spiced rum aged porter ", categoryType, 30.0, "kr"));
+        items.add(new SortementItem("item6", categoryType, 20.0, "kr"));
+        items.add(new SortementItem("item7", categoryType, 60.0, "kr"));
+        items.add(new SortementItem("item8", categoryType, 10.0, "kr"));
+        items.add(new SortementItem("item9", categoryType, 30.0, "kr"));
+        items.add(new SortementItem("item10",categoryType, 20.0, "kr"));
+        items.add(new SortementItem("item11",categoryType, 60.0, "kr"));
+        items.add(new SortementItem("item12",categoryType, 10.0, "kr"));
 
         SortementAdapter adapter = new SortementAdapter(getContext(), R.id.sortement_item, items );
         sortement.setAdapter(adapter);

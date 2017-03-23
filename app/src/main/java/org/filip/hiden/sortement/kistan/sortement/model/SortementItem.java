@@ -6,6 +6,7 @@ package org.filip.hiden.sortement.kistan.sortement.model;
 
 public class SortementItem {
     private String  name;
+    
     private String  type;
     private double  price;
     private String  unit;

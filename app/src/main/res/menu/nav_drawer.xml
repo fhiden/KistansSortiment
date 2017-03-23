@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item android:title="Start page"
+            android:id="@+id/nav_start" />
+    </group>
+    <group android:id="@+id/nav_group_functionality" >
+        <item
+            android:id="@+id/nav_news"
+            android:title="News" />
+        <item
+            android:id="@+id/nav_later"
+            android:title="Try Later" />
+    </group>
+
+    <group android:id="@+id/nav_group_settings">
+            <item
+                android:id="@+id/nav_Notifications"
+                android:title="Notifications" />
+    </group>
+
+</menu>

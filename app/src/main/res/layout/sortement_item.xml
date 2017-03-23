@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -9,14 +10,15 @@
 
     <ImageView
         android:layout_height="match_parent"
-        app:srcCompat="@mipmap/ic_launcher"
+        app:srcCompat="@drawable/full_bottle"
         android:id="@+id/imageView"
         android:layout_marginLeft="6dp"
         android:layout_marginBottom="6dp"
         android:layout_marginTop="6dp"
         android:layout_marginRight="6dp"
         android:layout_width="wrap_content"
-        android:cropToPadding="false" />
+        android:cropToPadding="false"
+        android:tint="@color/colorAccent" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -35,20 +37,40 @@
             android:textStyle="normal|bold"
             android:layout_marginTop="3dp" />
 
-        <TextView
-            android:text="TextView"
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/item_type"
-            android:textSize="14sp"
-            android:textAlignment="textStart"
-            android:textStyle="normal|italic"
-            android:layout_marginTop="3dp" />
+            android:layout_height="match_parent">
+
+            <TextView
+                android:text="TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/item_type"
+                android:textSize="14sp"
+                android:textAlignment="textStart"
+                android:textStyle="normal|italic"
+                android:layout_marginTop="3dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
 
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ratingBar"
+                android:layout_weight="0"
+                style="@style/myRatingBar"
+                android:numStars="5"
+                android:stepSize="0.5"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginLeft="0dp" />
 
             <TextView
                 android:text="TextView"
@@ -59,7 +81,9 @@
                 android:textAlignment="textEnd"
                 android:textAllCaps="false"
                 android:textStyle="normal|italic"
-                android:layout_marginTop="3dp" />
+                android:layout_weight="32.74"
+                android:layout_margin="4dp"
+                android:visibility="visible" />
 
             <TextView
                 android:text="TextView"
@@ -70,8 +94,10 @@
                 android:textAlignment="textStart"
                 android:textAllCaps="false"
                 android:textStyle="normal|italic"
-                android:layout_weight="13.96"
-                android:layout_marginTop="3dp" />
+                android:layout_weight="1.63"
+                android:layout_margin="4dp"
+                android:visibility="visible" />
+
         </LinearLayout>
 
     </LinearLayout>
