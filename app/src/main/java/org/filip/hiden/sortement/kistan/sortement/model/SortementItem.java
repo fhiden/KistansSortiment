@@ -1,5 +1,8 @@
 package org.filip.hiden.sortement.kistan.sortement.model;
 
+import android.graphics.Bitmap;
+import android.media.Image;
+
 /**
  * Created by fhiden on 2017-03-14.
  */
@@ -10,12 +13,16 @@ public class SortementItem {
     private String  type;
     private double  price;
     private String  unit;
+    private float rating;
+    private Bitmap image;
 
-    public SortementItem(String name, String type, double price, String unit){
+    public SortementItem(String name, String type, double price, String unit, float rating, Bitmap image){
         this.name = name;
         this.type = type;
         this.price = price;
         this.unit = unit;
+        this.rating = rating;
+        this.image = image;
 
     }
 
@@ -49,5 +56,21 @@ public class SortementItem {
 
     public void setUnit(String unit) {
         this.unit = unit;
+    }
+
+    public float getRating() {
+        return rating;
+    }
+
+    public void setRating(float rating) {
+        this.rating = rating;
+    }
+
+    public Bitmap getImage() {
+        return image;
+    }
+
+    public void setImage(Bitmap image) {
+        this.image = image;
     }
 }

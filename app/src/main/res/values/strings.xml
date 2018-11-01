@@ -6,4 +6,7 @@
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_pop_up">popUpActivity</string>
+    <string name="default_item_description">Item discription that has not been written yet. sorry for the inconvinience but we forgot.</string>
+    <string name="item_image">Image of item</string>
 </resources>

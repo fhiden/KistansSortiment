@@ -1,13 +1,16 @@
 package org.filip.hiden.sortement.kistan.sortement.model.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
-
+import org.filip.hiden.sortement.kistan.sortement.view.popUpActivity;
 import org.filip.hiden.sortement.kistan.sortement.R;
 import org.filip.hiden.sortement.kistan.sortement.model.SortementItem;
 
@@ -24,7 +27,8 @@ public class SortementAdapter extends ArrayAdapter<SortementItem> {
         TextView txtType;
         TextView txtPrice;
         TextView txtUnit;
-        //ImageView info;
+        RatingBar ratingBar;
+        ImageView picture;
     }
     Context mContext;
     ArrayList<SortementItem> items;
@@ -53,10 +57,20 @@ public class SortementAdapter extends ArrayAdapter<SortementItem> {
             viewHolder = new ViewHolder();
             LayoutInflater inflater = LayoutInflater.from(getContext());
             convertView = inflater.inflate(R.layout.sortement_item, parent,false);
+
+            viewHolder.picture = (ImageView)  convertView.findViewById(R.id.imageView);
             viewHolder.txtName = (TextView) convertView.findViewById(R.id.item_name);
             viewHolder.txtType = (TextView) convertView.findViewById(R.id.item_type);
             viewHolder.txtPrice = (TextView) convertView.findViewById(R.id.item_price);
             viewHolder.txtUnit = (TextView) convertView.findViewById(R.id.item_unit);
+            viewHolder.ratingBar = (RatingBar) convertView.findViewById(R.id.ratingBar);
+            convertView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent act = new Intent(mContext, popUpActivity.class);
+                    mContext.startActivity(act);
+                }
+            });
 
             result = convertView;
             convertView.setTag(viewHolder);
@@ -68,10 +82,13 @@ public class SortementAdapter extends ArrayAdapter<SortementItem> {
         //result.startAnimation(animation);
         lastPosition = position;
 
+      //  viewHolder.picture.setImageBitmap(item.getImage());
         viewHolder.txtName.setText(item.getName());
         viewHolder.txtType.setText(item.getType());
         viewHolder.txtPrice.setText(" "+item.getPrice());
         viewHolder.txtUnit.setText(item.getUnit());
+        viewHolder.ratingBar.setRating(item.getRating());
+
         return convertView;
     }
 }

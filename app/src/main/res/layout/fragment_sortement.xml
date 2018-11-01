@@ -1,15 +1,16 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="org.filip.hiden.sortement.kistan.sortement.view.SortementLayoutActivity"
+    android:background="@drawable/backgrounds"
     android:paddingLeft="6dp"
-    android:paddingRight="6dp">
-    <ListView
-    android:id="@+id/sortment_view"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-        android:paddingBottom="5dp">
-    </ListView>
+    android:paddingRight="6dp"
+    tools:context="org.filip.hiden.sortement.kistan.sortement.view.SortementLayoutActivity">
 
-</RelativeLayout>
+    <ListView
+        android:id="@+id/sortment_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="5dp"></ListView>
+
+</android.support.constraint.ConstraintLayout>
