@@ -14,6 +14,7 @@ import org.filip.hiden.sortement.kistan.sortement.view.popUpActivity;
 import org.filip.hiden.sortement.kistan.sortement.R;
 import org.filip.hiden.sortement.kistan.sortement.model.SortementItem;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
@@ -45,7 +46,7 @@ public class SortementAdapter extends ArrayAdapter<SortementItem> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         // Get the data item for this position
-        SortementItem item = getItem(position);
+        final SortementItem item = getItem(position);
 
         // view lookup cache to be stored in tag.
         ViewHolder viewHolder;
@@ -68,7 +69,11 @@ public class SortementAdapter extends ArrayAdapter<SortementItem> {
                 @Override
                 public void onClick(View view) {
                     Intent act = new Intent(mContext, popUpActivity.class);
+
+                    act.putExtra("ITEM", item);
                     mContext.startActivity(act);
+
+
                 }
             });
 

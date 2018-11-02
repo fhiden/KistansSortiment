@@ -2,12 +2,16 @@ package org.filip.hiden.sortement.kistan.sortement.model;
 
 import android.graphics.Bitmap;
 import android.media.Image;
+import android.os.Parcel;
+import android.os.Parcelable;
+
+import java.io.Serializable;
 
 /**
  * Created by fhiden on 2017-03-14.
  */
 
-public class SortementItem {
+public class SortementItem implements Parcelable{
     private String  name;
     
     private String  type;
@@ -25,6 +29,27 @@ public class SortementItem {
         this.image = image;
 
     }
+
+    protected SortementItem(Parcel in) {
+        name = in.readString();
+        type = in.readString();
+        price = in.readDouble();
+        unit = in.readString();
+        rating = in.readFloat();
+        image = in.readParcelable(Bitmap.class.getClassLoader());
+    }
+
+    public static final Creator<SortementItem> CREATOR = new Creator<SortementItem>() {
+        @Override
+        public SortementItem createFromParcel(Parcel in) {
+            return new SortementItem(in);
+        }
+
+        @Override
+        public SortementItem[] newArray(int size) {
+            return new SortementItem[size];
+        }
+    };
 
     public String getName() {
         return name;
@@ -72,5 +97,22 @@ public class SortementItem {
 
     public void setImage(Bitmap image) {
         this.image = image;
+    }
+
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeString(name);
+        parcel.writeString(type);
+        parcel.writeDouble(price);
+        parcel.writeString(unit);
+        parcel.writeFloat(rating);
+        parcel.writeParcelable(getImage(),i);
+
     }
 }
